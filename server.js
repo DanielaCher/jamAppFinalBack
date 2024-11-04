@@ -4,7 +4,7 @@ const http = require("http");
 const { Server } = require("socket.io");
 const cors = require("cors");
 const searchRoutes = require("./routes/search");
-//const userRoutes = require("./routes/userRoutes");
+const userRoutes = require("./routes/userRoutes");
 
 const app = express();
 app.use(cors());
