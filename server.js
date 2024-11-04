@@ -4,7 +4,6 @@ const http = require("http");
 const { Server } = require("socket.io");
 const cors = require("cors");
 const searchRoutes = require("./routes/search");
-const userRoutes = require("./routes/userRoutes");
 
 const app = express();
 app.use(cors());
@@ -12,7 +11,6 @@ app.use(express.json());
 
 // Define routes
 app.use("/search", searchRoutes);
-//app.use("/api/users", userRoutes);
 
 const server = http.createServer(app);
 
@@ -23,11 +21,6 @@ const io = new Server(server, {
     methods: ["GET", "POST"],
   },
 });
-// MongoDB connection
-// mongoose
-//   .connect(process.env.MONGODB_URI, {})
-//   .then(() => console.log("Connected to MongoDB"))
-//   .catch((err) => console.error("MongoDB connection error:", err));
 
 // Handle socket connection
 io.on("connection", (socket) => {
