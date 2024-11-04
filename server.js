@@ -6,7 +6,7 @@ const cors = require("cors");
 const searchRoutes = require("./routes/search");
 
 const app = express();
-app.use(cors({ origin: "jam-application.netlify.app" }));
+app.use(cors({ origin: "https://effortless-kleicha-008a7a.netlify.app" }));
 app.use(express.json());
 
 // Define routes
@@ -41,5 +41,5 @@ io.on("connection", (socket) => {
 // Start the server
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
-  console.log(`SERVER IS RUNNING on http://localhost:${PORT}`);
+  console.log(`SERVER IS RUNNING on:${PORT}`);
 });
