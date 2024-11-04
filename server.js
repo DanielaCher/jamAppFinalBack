@@ -6,7 +6,7 @@ const cors = require("cors");
 const searchRoutes = require("./routes/search");
 
 const app = express();
-app.use(cors());
+app.use(cors({ origin: "jam-application.netlify.app" }));
 app.use(express.json());
 
 // Define routes
