@@ -12,7 +12,7 @@ app.use(express.json());
 
 // Define routes
 app.use("/search", searchRoutes);
-app.use("/api/users", userRoutes);
+//app.use("/api/users", userRoutes);
 
 const server = http.createServer(app);
 
